@@ -10,12 +10,16 @@
   "authors":
   [
     {
+	  "name": "Eberhard Fahle",
+	  "email": "e.fahle@wayoda.org"
+	},
+    {
       "name": "Stephen Gordon",
       "email": "gordoste@iinet.net.au",
       "maintainer": true
     }
   ],
-  "version": "1.0.6",
+  "version": "1.0.7",
   "frameworks": "arduino",
-  "platforms": "*"
+  "platforms": [ "esp8266", "atmelavr" ],
 }
