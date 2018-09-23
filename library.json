@@ -19,7 +19,7 @@
       "maintainer": true
     }
   ],
-  "version": "1.0.7",
+  "version": "1.0.8",
   "frameworks": "arduino",
   "platforms": [ "esp8266", "atmelavr" ]
 }
