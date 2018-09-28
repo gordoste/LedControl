@@ -1,11 +1,11 @@
 {
-  "name": "LedControl_HW_SPI",
+  "name": "LedControl",
   "keywords": "display, max7219, max7221",
   "description": "A library for the MAX7219 and the MAX7221 Led display drivers using hardware SPI",
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/gordoste/LedControl_HW_SPI.git"
+    "url": "https://github.com/gordoste/LedControl.git"
   },
   "authors":
   [
@@ -19,7 +19,13 @@
       "maintainer": true
     }
   ],
-  "version": "1.0.8",
+  "dependencies":
+  [
+    {
+      "name": "SPI"
+    }
+  ],
+  "version": "1.1.0",
   "frameworks": "arduino",
   "platforms": [ "esp8266", "atmelavr" ]
 }
