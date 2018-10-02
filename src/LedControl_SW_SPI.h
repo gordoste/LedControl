@@ -3,7 +3,7 @@
 
 #include "LedControl.h"
 
-class LedControl_SW_SPI : LedControl
+class LedControl_SW_SPI : public LedControl
 {
   private:
     /* Data is shifted out of this pin*/

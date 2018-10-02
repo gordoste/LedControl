@@ -3,7 +3,7 @@
 
 #include "LedControl.h"
 
-class LedControl_HW_SPI : LedControl {
+class LedControl_HW_SPI : public LedControl {
   public:
   /* 
          * Create a new controler 
