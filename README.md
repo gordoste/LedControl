@@ -3,17 +3,20 @@ LedControl
 LedControl is an [Arduino](http://arduino.cc) library for MAX7219 and MAX7221 Led display drivers.
 The code also works with the [Teensy (3.1)](https://www.pjrc.com/teensy/)
 
-Modified by Jack Zimmermann for supporting hardware SPI using the predefined MOSI and SCK pins on supported devices.
+Hardware SPI modifications  by Jack Zimmermann for supporting hardware SPI using the predefined MOSI and SCK pins on supported devices.
 
-This is a modified version using hardware SPI calls instead of bit banging. Speed increase is 20x or greater.
+Library version which supports both software and hardware SPI created by Stephen Gordon.
 
 Usage
 -----
-You need to use the assigned hardware SPI pins on your Arduino. Se table for correct pins. Some Arduinos doesn't have the SCK pin so this library won't work on those. The Chip Select(csPin) can be any pin you like, except one of the aforementioned pins. The new initialisation only needs the csPin and number of devices.
-**LedControl::LedControl(int csPin, int numDevices)**
+Declare a variable of type LedControl_HW_SPI or LedControl_SW_SPI and use the relevant constructor. Then use the normal LedControl API - begin(), setRow(), setCol, setLed(), etc..
 
-Pin Assignments
----------------
+For software SPI, you can use whatever pins you like. The overall transfer speed is slower, and you cannot limit the SPI communication speed. This can be a problem in applications where interference is an issue.
+
+For hardware SPI, you need to use the assigned hardware SPI pins, but the speed is 20x or greater and you can set a limit on the speed. The table below for correct pins for some devices. Some Arduinos doesn't have the SCK pin so this library won't work on those. The Chip Select(csPin) can be any pin but be careful to avoid pins that are used for SD transfers, on-board memory and other things - check your board documentation. The new initialisation only needs the csPin and number of devices.
+
+HW SPI Pin Assignments
+----------------------
 
 | Arduino Board | MOSI | MISO | SCK | SS (Slave) | SS (Master) |
 |---------------|------|------|-----|------------|-------------|
@@ -26,11 +29,11 @@ Pin Assignments
 
 Documentation
 -------------
-Documentation for the library is on the [Github Project Pages](http://wayoda.github.io/LedControl/)
+Documentation for the LedControl API  is on the [Github Project Pages](http://wayoda.github.io/LedControl/)
 
 Download
 --------
-The lastest binary version of the Library is always available from the 
+The latest binary version of the original Library is always available from the 
 [LedControl Release Page](https://github.com/wayoda/LedControl/releases) 
 
 
