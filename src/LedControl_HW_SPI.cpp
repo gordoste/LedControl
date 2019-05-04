@@ -27,6 +27,8 @@
 #include "LedControl_HW_SPI.h"
 #include <SPI.h>
 
+LedControl_HW_SPI::LedControl_HW_SPI() : LedControl() {};
+
 void LedControl_HW_SPI::begin(int csPin, int numDevices, unsigned long spiSpeedMax)
 {
     SPI_CS = csPin;
