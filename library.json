@@ -1,7 +1,7 @@
 {
   "name": "LedControl",
   "keywords": "display, max7219, max7221",
-  "description": "A library for the MAX7219 and the MAX7221 Led display drivers using hardware SPI",
+  "description": "Control MAX7219/MAX7221 LED display drivers. Choose between hardware SPI (fast) or software SPI (flexible).",
   "repository":
   {
     "type": "git",
